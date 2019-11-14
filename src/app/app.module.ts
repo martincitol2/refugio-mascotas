@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MascotasListarComponent } from './mascotas/mascotas-listar/mascotas-listar.component';
 import { MascotasAgregarComponent } from './mascotas/mascotas-agregar/mascotas-agregar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MascotasEditarComponent } from './mascotas/mascotas-editar/mascotas-editar.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     InicioComponent,
     MascotasListarComponent,
-    MascotasAgregarComponent
+    MascotasAgregarComponent,
+    MascotasEditarComponent 
   ],
   imports: [
     BrowserModule,

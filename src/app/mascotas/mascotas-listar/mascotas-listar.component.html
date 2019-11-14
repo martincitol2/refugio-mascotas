@@ -15,6 +15,7 @@
             <td>{{item.tipo}}</td>
             <td>{{item.edad}}</td>
             <td>{{item.descripcion}}</td>
+            <td><button class="btn btn-icon icon-button" [routerLink]="['/mascotas-editar',item.id]" ><clr-icon shape="pencil"></clr-icon></button></td>
         </tr>
     </tbody>
 </table>
