@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MascotasService } from '../mascotas.service';
 
 @Component({
   selector: 'app-mascotas-agregar',
@@ -9,14 +11,28 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class MascotasAgregarComponent implements OnInit {
 
   mascotasForm = new FormGroup({
-    nombre: new FormControl('',Validators.required),
-    tipo: new FormControl('',Validators.required),
-    edad: new FormControl('',Validators.required),
-    descripcion: new FormControl('',Validators.required)
+    nombre: new FormControl('', [Validators.required]),
+    tipo: new FormControl('', [Validators.required]),
+    edad: new FormControl('', [Validators.required, Validators.pattern("[0-9]+")]),
+    descripcion: new FormControl('', [Validators.required])
   });
 
-  constructor() { 
-    
+  constructor(private router: Router, private mascotasService: MascotasService) {
+
+  }
+
+  onSubmit($event) {
+    this.mascotasService.addMascota(this.mascotasForm.value);
+  }
+
+  reset($event) {
+    $event.preventDefault();
+    this.mascotasForm.reset();
+  }
+
+  comeBack($event) {
+    $event.preventDefault();
+    this.router.navigate(['/mascotas-listar']);
   }
 
   ngOnInit() {

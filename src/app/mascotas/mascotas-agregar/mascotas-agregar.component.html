@@ -1,1 +1,30 @@
-<p>mascotas-agregar works!</p>
+<h1>Agregar Mascota para adopción</h1>
+<form clrForm [formGroup]="mascotasForm" (ngSubmit)="onSubmit($event)">
+    <clr-input-container>
+        <label>Nombre</label>
+        <input clrInput type="text" formControlName="nombre" />
+        <clr-control-helper>Nombre de tu mascota</clr-control-helper>
+        <clr-control-error>Error, El valor introducido no es válido o no puede ser vacío</clr-control-error>
+    </clr-input-container>
+    <clr-input-container>
+        <label>Tipo</label>
+        <input clrInput type="text" formControlName="tipo" />
+        <clr-control-helper>Tipo de su mascota</clr-control-helper>
+        <clr-control-error>Error, El valor introducido no es válido o no puede ser vacío</clr-control-error>
+    </clr-input-container>
+    <clr-input-container>
+        <label>Edad</label>
+        <input clrInput type="number" formControlName="edad" />
+        <clr-control-helper>Edad en años de su mascota</clr-control-helper>
+        <clr-control-error>Error, El valor introducido no es válido o no puede ser vacío</clr-control-error>
+    </clr-input-container>
+    <clr-input-container>
+        <label>Descripcion</label>
+        <input clrInput type="text" formControlName="descripcion" />
+        <clr-control-helper>Descripcion de su mascota</clr-control-helper>
+        <clr-control-error>Error, El valor introducido no es válido o no puede ser vacío</clr-control-error>
+    </clr-input-container>
+    <button class="btn" type="submit" [disabled]="!mascotasForm.valid">AGREGAR</button>
+    <button class="btn btn-primary" type="button" (click)="reset($event)">LIMPIAR</button>
+    <button class="btn" type="button" (click)="comeBack($event)">CANCELAR</button>
+</form>
