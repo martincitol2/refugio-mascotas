@@ -30,4 +30,22 @@ export class MascotasService {
         this.router.navigate(['/mascotas-listar']);
   });  
       }
+    
+      public deleteMascota(id:number){
+        return this.httpClient.delete<Mascota>(`${this.baseUrl}/${id}`);
+       
+
+        }
+  
+
+        /*deleteEmployee(id: number) {
+    this.employeeService.deleteEmployee(id)
+      .subscribe(
+        data => {
+          console.log(data);
+          this.reloadData();
+        },
+        error => console.log(error));
+  }*/
+    
 }

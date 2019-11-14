@@ -1,5 +1,5 @@
 <h1>Agregar Mascota para adopción</h1>
-<form clrForm [formGroup]="mascotasForm" (ngSubmit)="onSubmit($event)">
+<form clrForm [formGroup]="mascotasForm" (ngSubmit)="onSubmit()">
     <clr-input-container>
         <label>Nombre</label>
         <input clrInput type="text" formControlName="nombre" />

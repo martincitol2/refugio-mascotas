@@ -7,6 +7,8 @@
             <th>Tipo</th>
             <th>Edad</th>
             <th>Descripcion</th>
+            <th>Editar</th>
+            <th>Borrar</th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +18,7 @@
             <td>{{item.edad}}</td>
             <td>{{item.descripcion}}</td>
             <td><button class="btn btn-icon icon-button" [routerLink]="['/mascotas-editar',item.id]" ><clr-icon shape="pencil"></clr-icon></button></td>
+            <td><button class="btn btn-icon icon-button" type="submit" (click)="delete($event,item.id)" ><clr-icon shape="trash"></clr-icon></button></td>
         </tr>
     </tbody>
 </table>

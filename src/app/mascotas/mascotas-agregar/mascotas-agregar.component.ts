@@ -21,7 +21,7 @@ export class MascotasAgregarComponent implements OnInit {
 
   }
 
-  onSubmit($event) {
+  onSubmit() {
     this.mascotasService.addMascota(this.mascotasForm.value);
   }
 
