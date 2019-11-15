@@ -15,7 +15,8 @@ export class MascotasEditarComponent implements OnInit {
     nombre: new FormControl('', [Validators.required]),
     tipo: new FormControl('', [Validators.required]),
     edad: new FormControl('', [Validators.required, Validators.pattern("[0-9]+")]),
-    descripcion: new FormControl('', [Validators.required])
+    descripcion: new FormControl('', [Validators.required]),
+    imagen: new FormControl('')
   });
 
   constructor(private mascotasServices:MascotasService,private router:ActivatedRoute,private route:Router) { }

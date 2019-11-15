@@ -24,6 +24,12 @@
         <clr-control-helper>Descripcion de su mascota</clr-control-helper>
         <clr-control-error>Error, El valor introducido no es válido o no puede ser vacío</clr-control-error>
     </clr-input-container>
+    <clr-input-container>
+        <label>Imagen URL</label>
+        <input clrInput type="text" formControlName="imagen"/>
+        <clr-control-helper>Imagen url de su mascota</clr-control-helper>
+        <clr-control-error>Error, El valor introducido no es válido o no puede ser vacío</clr-control-error>
+    </clr-input-container>
     <button class="btn btn-success" type="submit">ACTUALIZAR</button>
     <button class="btn" type="button" (click)="comeBack($event)">CANCELAR</button>
 </form>
